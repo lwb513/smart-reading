@@ -7,7 +7,7 @@ from langchain_core.documents import Document
 def recall_with_scores(
         query:str,
         vector_store: Chroma,
-        k: int = 4,
+        k: int = 30,
 
 )-> Tuple[List[ Document],List[float]]:
     result= vector_store.similarity_search_with_relevance_scores(query,k)
